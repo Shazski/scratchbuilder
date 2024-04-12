@@ -1,0 +1,57 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 style="color:red ;" class="text-center">EDIT PC</h2>
+                <form action="/admin/edit-products/{{newPro._id}}" method="post" enctype="multipart/form-data">
+
+                    <label for="">Category</label>
+                    <select class="form-control" name="category" id="">
+                        <option value="{{newPro.category}}">{{newPro.category}}</option>
+                        <option value="budget">Budget</option>
+                        <option value="enthusiast">Enthusiast</option>
+                        <option value="extream">Extream</option>
+                        <option value="streaming">Streaming</option>
+                    </select>
+                    <label for="">Pc Name</label>
+                    <input type="text" value="{{newPro.name}}" name="name" class="form-control">
+                    <label for="">Processor</label>
+                    <input type="text" value="{{newPro.processor}}" name="processor" class="form-control">
+                    <label for="">Motherboard</label>
+                    <input type="text" name="motherboard" value="{{newPro.motherboard}}" class="form-control">
+                    <label for="">Graphics Card</label>
+                    <input type="text" name="graphics" class="form-control" value="{{newPro.graphics}}">
+                    <label for="">Ssd</label>
+                    <input type="text" name="ssd" class="form-control" value="{{newPro.ssd}}">
+                    <label for="">Hdd</label>
+                    <input type="text" name="hdd" class="form-control" value="{{newPro.hdd}}">
+                    <label for="">Ram</label>
+                    <input type="text" name="ram" class="form-control" value="{{newPro.ram}}">
+                    <label for="">Cpu Cabinet</label>
+                    <input type="text" name="cabinet" class="form-control" value="{{newPro.cabinet}}">
+                    <label for="">Cpu Cooler</label>
+                    <input type="text" name="cooler" class="form-control" value="{{newPro.cooler}}">
+                    <label for="">Psu</label>
+                    <input type="text" name="psu" class="form-control" value="{{newPro.psu}}">
+
+                    <label for="">Price</label>
+                    <input type="text" name="price" class="form-control" value="{{newPro.price}}">
+
+                    
+
+                    <label for="">Image</label>
+                    <img src="/images/{{newPro._id}}.jpg" alt="" style="height:50px ;width:50px;" id="img" >
+                    <input type="file" name="image" class="form-control" onchange="editImage(event)" >
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>  
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function editImage(event){
+        document.getElementById('img').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

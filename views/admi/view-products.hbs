@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-image: url( 62862be04256997d0cfcc23e.jpg`); font-family: 'Times New Roman', Times, serif; background-image:linear-gradient(to right,rgb(0, 0, 0),rgba(0, 0, 0, 0.73)),url(/pics/gaming-pc-03-17_01.jpg)";>
+  
+<div class="container">
+    <div class="row">
+        <a href="/admin/add-pc" class="btn btn-success ml-auto mt-3">ADD PC</a>
+    </div>
+    <div>
+      
+    </div>
+    <table class="table mt-3">
+  <thead>
+    <tr style="color: white;">
+      <th scope="col">Category</th>
+      <th scope="col">Processor</th>
+      <th scope="col">Pc Name</th>
+      <th scope="col">Motherboard</th>
+      <th scope="col">Graphics Card</th>
+      <th scope="col">Ssd</th>
+      <th scope="col">Hdd</th>
+      <th scope="col">Ram</th>
+      <th scope="col">Cpu Cabinet</th>
+      <th scope="col">Cpu Cooler</th>
+      <th scope="col">Psu</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+      <th scope="col">Edit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp; &nbsp;Delete</th>
+
+    </tr>
+  </thead>
+  {{#each pc}}
+  <body>
+    <tr style="color: white;">
+      <td>{{this.category}}</td>
+      <td>{{this.processor}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.motherboard}}</td>
+      <td>{{this.graphics}}</td>
+      <td>{{this.ssd}}</td>
+      <td>{{this.hdd}}</td>
+      <td>{{this.ram}}</td>
+      <td>{{this.cabinet}}</td>
+      <td>{{this.cooler}}</td>
+      <td>{{this.psu}}</td>
+      <td>{{this.price}}</td>
+      <td><img style="width: 50px;height:50px;" src="/images/{{this._id}}.jpg" alt="image not found"></td>
+      <td><a href="/admin/edit-products/{{this._id}}" class="btn btn-primary">Edit</a>
+          <a href="/admin/delete-products/{{this._id}}" class="btn btn-danger" onclick="return confirm('are you want to delete the product {{this.name}}')" >Delete</a>
+
+      </td>
+    </tr>
+    {{/each}}
+  </body>
+</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row">
+  <div class="col-md-8 mb-4">
+    <div class="card mb-4">
+      <div class="card-header py-3">
+        <h5 class="mb-0">Biling details</h5>
+      </div>
+      <div class="card-body">
+        <form action="/buy-now-pre" method="POST" id="checkout-form">
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input required name="name" minlength="3" type="text" id="form7Example1" class="form-control" />
+                <label class="form-label" for="form7Example1">Name</label>
+              </div>
+            </div>
+          </div>
+          <div  class="form-outline mb-4">
+          </div>
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input minlength="10" required name="address" type="text" id="form7Example4" class="form-control" />
+            <label class="form-label" for="form7Example4">Address</label>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input min="99990" max="999999" required name="pincode" type="number" id="form7Example5" class="form-control" />
+            <label class="form-label" for="form7Example5">Pincode</label>
+          </div>
+
+          <!-- Number input -->
+          <div class="form-outline mb-4">
+            <input min="999999999" max="9999999999" required name="mobile" type="number" id="form7Example6" class="form-control" />
+            <label class="form-label" for="form7Example6">Mobile</label>
+            <input type="txt" name="userId" value="{{userId}}" hidden >
+          </div>
+          <div>
+            <input type="txt" name="userEmail" value={{email}} hidden >
+            <input type="txt" name="amount" value={{price}} hidden>
+            <input type="txt" name="pcName" value={{pcName}} hidden>
+            <input type="txt" name="paymentStatus" value="pending" hidden>
+            <input type="txt" name="status" value="placed" hidden>
+          </div>
+
+          <div class="col-md-4 mb-4">
+             <div class="card mb-4">
+      <div class="card-header py-3">
+        <h5 class="mb-0">Summary</h5>
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+            Payment Method
+            <hr>   
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+            <input type="radio" name="payment" checked value="Cod">Cod <br>
+            <input type="radio" name="payment" value="Online Payment">Online payment <br>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+            <div>
+              <strong>Total amount</strong>
+              <strong>
+                <p class="mb-0">(including VAT)</p>
+              </strong>
+            </div>
+            <span><strong>Rs.{{price}}</strong></span>
+          </li>
+        </ul>
+
+        <button  type="submit" class="btn btn-primary btn-lg btn-block">
+          Make purchase
+        </button>
+      </div>
+    </div>
+
+            
+              
+    
+  </div>
+</div>
+</div>
+            </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>

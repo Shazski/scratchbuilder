@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body id="bgimage" style="background-image:linear-gradient(to left,rgb(29, 29, 29),rgba(0, 0, 0, 0.73)),url('/pics/Adamant-Custom-VR-Ready-8X-Core-Gaming-Desktop-PC-1.jpg');">
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 style="color: white;" class="text-center">ADD PC</h2>
+                <form style="color: white;" action="/admin/add-pc" method="post" enctype="multipart/form-data">
+
+                    <label for="">Category</label>
+                    <select class="form-control" name="category" id="">
+                        <option value="budget">Budget</option>
+                        <option value="enthusiast">Enthusiast</option>
+                        <option value="extream">Extream</option>
+                        <option value="streaming">Streaming</option>
+                    </select>
+                    <label for="">Pc Name</label>
+                    <input type="text" name="name" class="form-control">
+                    <label for="">Processor</label>
+                    <input type="text" name="processor" class="form-control">
+                    <label for="">Motherboard</label>
+                    <input type="text" name="motherboard" class="form-control">
+                    <label for="">Graphics Card</label>
+                    <input type="text" name="graphics" class="form-control">
+                    <label for="">Ssd</label>
+                    <input type="text" name="ssd" class="form-control">
+                    <label for="">Hdd</label>
+                    <input type="text" name="hdd" class="form-control">
+                    <label for="">Ram</label>
+                    <input type="text" name="ram" class="form-control">
+                    <label for="">Cpu Cabinet</label>
+                    <input type="text" name="cabinet" class="form-control">
+                    <label for="">Cpu Cooler</label>
+                    <input type="text" name="cooler" class="form-control">
+                    <label for="">Psu</label>
+                    <input type="text" name="psu" class="form-control">
+
+
+                    <label for="">Price</label>
+                    <input type="number" name="price" class="form-control">
+
+                    <label for="">Image</label>
+                    <input type="file" name="image" class="form-control">
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
